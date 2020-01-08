@@ -1,0 +1,55 @@
+<!Doctype html>
+<html>
+<head>
+	<title>
+		Vanilla JavaScript Excercises
+	</title>
+
+</head>
+
+
+
+
+<body>
+The point of this excercise is to ask a user for a string, seperate string values and place them into an array, then convert the string values into integers (granted the user gives us numbers in the string).
+Then perform some basic math functions with the array. <br> <br>
+<script type="text/javascript">
+
+
+//Create a string variable that prompts the user for 5 numbers seperated by commas
+	var str = prompt("Enter 5 numbers delimited by commas (example: 1,2,3,4,5)\nDo not put spaces between them.");
+
+//Create an array variable to pass our user inputs to
+	var strArray = new Array();
+
+//Split function can seperate user inputs by targeting whatever is in quotes.
+//Pass the split string inputs to the array.
+	strArray = str.split(",");
+
+
+//Test to see if the inputs were passed to the array. 
+//Join the inputs with a space to show that the commas were removed by split function.
+	console.log("User inputs still in string type: "+ strArray.join(" "));
+	document.write("User inputs in string type: "+ strArray.join("  ") + "<br>");
+
+
+//Convert string values to number/integer values with the map(Number) function. 
+	var numArray = strArray.map(Number);
+
+
+	console.log("This is the numArray we parsed from the string type array " +numArray.join(" "));
+	document.write("User inputs in integer type: " +numArray.join(" ") + "<br>");
+
+//Use native Math functions to find the maximum and minimum values in the 
+	var maxNum = Math.max.apply(null, strArray);
+	var minNum = Math.min.apply(null, strArray);
+//Display the maxium and minimum values
+
+	console.log("This is the max: " + maxNum + " This is the min: " + minNum);
+	document.write("This is the max: " + maxNum + "<br>" + "This is the min:  " + minNum);
+	
+
+</script>
+   
+</body>
+</html>
