@@ -1,0 +1,49 @@
+<!Doctype html>
+<html>
+<head>
+	<title>
+Counts vowels in words	</title>
+</head>
+
+
+
+
+
+
+<body>
+
+<script type ="text/javascript">
+
+var userWords = prompt("Please enter a string of words");
+var wordCopy= userWords;
+
+/* JavaScript function that accepts a string as a parameter 
+and counts the number of vowels within the string.*/
+function vowelFunction(str)
+{
+ var vowelBank = 'aeiouAEIOU'; //Create a var with the vowels to be checked against
+  var vowelCounter = 0; //Create a counter for the vowels
+  
+  for(var x = 0; x < str.length ; x++)//Create for-loop to iterate through the letters in the string
+  {	
+    if (vowelBank.indexOf(str[x]) !== -1)//For every vowel, add 1 to the counter
+    {
+      vowelCounter += 1;
+    }
+  
+  }
+  return vowelCounter; //Create a return statement so we can get the results back.
+}
+//Pass strings into the vowelFunction
+console.log(vowelFunction(wordCopy));
+console.log(vowelFunction(wordCopy));
+
+
+
+</script>
+
+
+</body>
+
+
+</html>
