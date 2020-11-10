@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+<head>
+	<title>
+	    Converting string data to integer data
+	</title>
+</head>
+<!--The point of this function is for a user to type some numbers (seperated by commas) in the prompt which will be read as 'string' data type. Then we will take the numbers in 'string' type and convert them to  'integer' type. -->
+<body>
+
+<script type="text/javascript">
+	var str = prompt("Enter a set a numbers with no spaces please!");
+	var strArray = new Array();
+	strArray = str.split("");
+
+   	 //Convert string values to number/integer values with the map(Number) function. 
+	var numArray = strArray.map(Number);
+
+    	//Use native Math functions to find the maximum and minimum values in the 
+	var maxNum = Math.max.apply(null, strArray);
+	var minNum = Math.min.apply(null, strArray);
+	var sortMe = strArray.sort();
+	
+	document.write("User inputs in string type: "+ strArray.join("  ") + "<br>");
+   	document.write("User inputs in integer type: " +numArray.join(" ") + "<br>");
+    	document.write("This is the sorted array of integers" + sortMe + "<br>");
+	document.write("This is the max: " + maxNum + "<br>" + "This is the min:  " + minNum);
+	
+	console.log("User inputs in string type: "+ strArray.join("  ") + "<br>");
+    	console.log("User inputs in integer type: " +numArray.join(" ") + "<br>");
+    	console.log("This is the sorted array of integers" + sortMe + "<br>");
+	console.log("This is the max: " + maxNum + "<br>" + "This is the min:  " + minNum);
+</script>
+   
+</body>
+</html>
